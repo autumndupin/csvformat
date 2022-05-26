@@ -47,6 +47,7 @@ Part 2:
 
 Part 3: 
 - [x] Write tests
+   - Want to have: Verify CSV Downloads
 - [x] Do some manual testing
 
 
