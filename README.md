@@ -22,5 +22,6 @@ Output: Downloadable CSV file with duplicate rows removed
    npm test
    ```
 
+Project will run on http://localhost:3000/
 
 <p align="right">(<a href="#top">back to top</a>)</p>
