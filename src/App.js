@@ -1,8 +1,7 @@
 import './App.css';
 import React, { useState } from "react";
-import FileSaver from 'file-saver';
 import Papa from 'papaparse';
-import {transformData} from './helpers'
+import {transformData, handleExport} from './helpers'
 
 function App() {
   const [parsedCSV, setParsedCSV] = useState(); 
@@ -23,11 +22,6 @@ function App() {
           setParsedCSV(results.data)
         },
       });
-  }
-
-  const handleExport = (csv) => {
-    const csvData = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
-    FileSaver.saveAs(csvData, 'data.csv');
   }
 
   const handleOnSubmit = ( ) => {
