@@ -1,4 +1,4 @@
-## Problem: 
+### Problem: 
 
 Need to take an imported CSV, identify, and remove duplicate rows
 
@@ -50,7 +50,7 @@ Part 3:
 - [x] Do some manual testing
 
 
-Things that would have been nice to cover / Enhancements: 
+_Things that would have been nice to cover / Enhancements:_
 - Phone numbers may come in different formats. Phone numbers should be made uniform before filtering.
 - Handle error messaging for non-CSV file upload attempts.
 - Disable Import CSV if there is no file uploaded. Handle error messaging in this case if user tries to submit.
