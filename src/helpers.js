@@ -26,26 +26,25 @@ export function transformData(parsedCSV, option) {
 }
 
 // takes in a parsed CSV file (array of objects) and returns only unique rows filtered by email
-const filterByEmailDupes = (parsedCSV) => {
+export function filterByEmailDupes(parsedCSV) {
   const filteredRows = parsedCSV.filter((row, index, array) => array.findIndex(r => r.Email === row.Email) === index);
-  console.log(filteredRows)
   return filteredRows
 }
 
 // takes in a parsed CSV file (array of objects) and returns only unique rows filtered by phone
-const filterByPhoneDupes = (parsedCSV) => {
+export function filterByPhoneDupes(parsedCSV) {
   const filteredRows = parsedCSV.filter((row, index, array) => array.findIndex(r => r.Phone === row.Phone) === index);
-  console.log(filteredRows)
+  return filteredRows
 }
 
 // takes in a parsed CSV file (array of objects) and returns only unique rows filtered by email or phone
-const filterByEmailOrPhoneDupes = (parsedCSV) => {
+export function filterByEmailOrPhoneDupes(parsedCSV) {
   const filteredRows = parsedCSV.filter((row, index, array) => array.findIndex(r => r.Email === row.Email || r.Phone === row.Phone) === index);
-  console.log(filteredRows)
+  return filteredRows
 }
 
 // takes in a set of filtered rows (array of objects) and returns a new csv file
-const generateNewCSV = (filteredRows) => {
+export function generateNewCSV(filteredRows) {
   const header = ["First Name", "Last Name", "Email", "Phone"]
   const newCSV = Papa.unparse({
     "fields": header,
