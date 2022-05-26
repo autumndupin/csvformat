@@ -1,6 +1,8 @@
 # Removes CSV Duplicates 
 With option to specify removal by duplicate emails, phone numbers, emails or phone numbers
 
+Output: Downloadable CSV file with duplicate rows removed
+
 ### Installation
 
 1. Clone the repo
