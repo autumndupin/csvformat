@@ -26,24 +26,24 @@ _Testing:_
 ### TODOS: 
 
 Part 1: 
-- Create CSV uploader for user
-- On submit, send CSV to server to read/parse
-- Identify duplicates
-   - Start with email 
-- Remove the duplicate row
-- Send the data back in a new CSV 
-- Allow user to see/download CSV 
+- [x] Create CSV uploader for user
+- [x] On submit, send CSV to server to read/parse
+- [x] Identify duplicates
+   - [x] Start with email 
+- [x] Remove the duplicate row
+- [ ] Send the data back in a new CSV 
+- [ ] Allow user to see/download CSV 
 
 Part 2:
-- Allow user to choose filter specification  
-   - email only
-   - phone only
-   - email or phone 
-- Send specification to server
-- Create filter functions for each specification
-- Remove duplicate according to specification
-- Send the data back in a new CSV
-- Allow user to see/download CSV 
+- [ ] Allow user to choose filter specification  
+   - [ ] email only
+   - [ ] phone only
+   - [ ] email or phone 
+- [ ] Send specification to server
+- [ ] Create filter functions for each specification
+- [ ] Remove duplicate according to specification
+- [ ] Send the data back in a new CSV
+- [ ] Allow user to see/download CSV 
 
 Part 3: 
-- Write tests
+- [ ] Write tests
