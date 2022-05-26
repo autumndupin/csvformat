@@ -1,9 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { filterByEmailDupes, filterByPhoneDupes, filterByEmailOrPhoneDupes, generateNewCSV} from './helpers'
-import FileSaver from 'file-saver';
+import { filterByEmailDupes, filterByPhoneDupes, filterByEmailOrPhoneDupes, generateNewCSV, handleExport } from './helpers'
 import App from './App';
-import {handleExport} from './App';
 
 const fakeCSV = [
   {"First Name": 'Autumn', "Last Name": 'Test', "Email": 'autumn@dev.null', "Phone": '333-422-3333'},
@@ -79,7 +77,6 @@ test('import csv file', () => {
   expect(input.files.item(0)).toStrictEqual(file)
   expect(input.files).toHaveLength(1)
 })
-
 
 test('removes duplicates by email', () => {
   const filteredRows = filterByEmailDupes(fakeCSV)
