@@ -30,10 +30,9 @@ function App() {
     FileSaver.saveAs(csvData, 'data.csv');
   }
 
-  const handleOnSubmit = (e) => {
+  const handleOnSubmit = ( ) => {
     const newCSV = transformData(parsedCSV, dupeOption)
     handleExport(newCSV)
-    debugger;
   }
 
   return (
@@ -41,16 +40,18 @@ function App() {
       <form>
         <input
             type={"file"}
-            id={"csvImport"}
+            data-testid={"csv-input"}
+            id={"csv-import"}
             accept={".csv"}
             onChange={handleUpload}
           />
-        <select id="dupeSelect" name="dupeOptions" onChange={handleSelect}>
+        <select id="dupeSelect" name="dupeOptions" data-testid={"option-select"} onChange={handleSelect}>
           <option value="email">Remove duplicate rows by email</option>
           <option value="phone">Remove duplicate rows by phone</option>
           <option value="emailOrPhone">Remove duplicate rows by email or phone</option>
         </select>
         <button
+          data-testid={"csv-submit"}
           onClick={(e) => {
             handleOnSubmit(e);
           }}
