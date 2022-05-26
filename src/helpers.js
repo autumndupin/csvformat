@@ -1,11 +1,4 @@
 import Papa from 'papaparse';
-import FileSaver from 'file-saver';
-
-//takes in a formatted csv data and creates a csv download
-export function handleExport(csv) {
-  const csvData = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
-  FileSaver.saveAs(csvData, 'data.csv');
-}
 
 // takes in a parsed CSV file (array of objects) and returns new CSV without duplicate rows
 export function transformData(parsedCSV, option) {

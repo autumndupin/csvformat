@@ -1,7 +1,8 @@
 import './App.css';
 import React, { useState } from "react";
 import Papa from 'papaparse';
-import {transformData, handleExport} from './helpers'
+import FileSaver from 'file-saver'
+import {transformData} from './helpers'
 
 function App() {
   const [parsedCSV, setParsedCSV] = useState(); 
@@ -13,6 +14,11 @@ function App() {
 
   const handleSelect = (e) => {
     setDupeOption(e.target.value)
+  }
+
+  const handleExport = (csv) => {
+    const csvData = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+    FileSaver.saveAs(csvData, 'data.csv');
   }
 
   const handleParse = (file) => {
