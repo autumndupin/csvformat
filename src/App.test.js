@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { filterByEmailDupes, filterByPhoneDupes, filterByEmailOrPhoneDupes, generateNewCSV, handleExport } from './helpers'
+import { filterByEmailDupes, filterByPhoneDupes, filterByEmailOrPhoneDupes, generateNewCSV} from './helpers'
 import App from './App';
 
 const fakeCSV = [
